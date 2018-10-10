@@ -4,7 +4,7 @@ def solve16(n):
     #Renvoie la somme des chiffres de 2**n
     puissance=2**n
     somme=0                         #Initialisation de la somme
-    while puissance!=0:             #On s'arrète quand il n'y a plus de chiffre à additionner
+    while puissance!=0:             #On s'arréte quand il n'y a plus de chiffres à additionner
         somme+=puissance%10         #Ajout du dernier chiffre en prenant le reste dans la division par 10
         puissance=puissance//10     #On se "sépare" du chiffre que l'on vient d'ajouter à la somme.
     return somme
@@ -69,10 +69,10 @@ def est_palindrome(x):
 def est_lychrel(x):
     #Teste si le nombre x est un nombre de lychrel
     i=0
-    while i<50:                 #On test uniquement les 50 premières itération (indication donnée dans le problème)
+    while i<50:                 #On test uniquement les 50 premiéres itérations (indication donnée dans le problème)
         x=x+miroir(x)
         if est_palindrome(x):
-            return False        #Ce n'est pasun nombre de lychrel si on obtient un palindrome avant les 50 premières itérations
+            return False        #Ce n'est pas un nombre de lychrel si on obtient un palindrome avant les 50 premiéres itérations
         i=i+1
     return True
 
